@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faEdit,faUserPlus,faUserMinus } from '@fortawesome/free-solid-svg-icons';
-import { MatDialog, MatDialogRef, MatSnackBar } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { CustomerEditComponent } from '../customer-edit/customer-edit.component';
 import { FullCustomerModel } from 'src/app/models/fullCustomerModel';
 import { CustomersService } from 'src/app/services/customers.service';

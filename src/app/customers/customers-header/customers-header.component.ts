@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerEditComponent } from '../customer-edit/customer-edit.component';
 import { Helpers } from 'src/app/Utils/Helpers';
-import { MatDialogRef, MatSnackBar, MatDialog } from '@angular/material';
+import { MatDialogRef, MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { CustomerCRUD } from 'src/app/Utils/Enums';
 import { CustomersService } from 'src/app/services/customers.service';
 import { CustomersFilterModel } from 'src/app/models/customersFilterModel';

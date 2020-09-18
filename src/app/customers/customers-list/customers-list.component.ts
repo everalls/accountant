@@ -11,7 +11,7 @@ import { Helpers } from 'src/app/Utils/Helpers';
 import { HeaderService } from 'src/app/services/header.service';
 import { CustomerReportModel } from 'src/app/models/customerReportModel';
 import { CustomersFilterModel } from 'src/app/models/customersFilterModel';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 
 

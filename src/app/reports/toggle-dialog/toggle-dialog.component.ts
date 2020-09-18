@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatSnackBar, MatDialogRef } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { reports } from 'src/app/models/report';
 import { ReportsService } from 'src/app/services/reports.service';
 import { Helpers } from 'src/app/Utils/Helpers';

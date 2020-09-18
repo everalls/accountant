@@ -1,24 +1,22 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import {
-  MatCardModule,
-  MatGridListModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatDatepickerModule,
-  MatNativeDateModule,
-  MatButtonModule,
-  MatSelectModule,
-  MatIconModule,
-  MatMenuModule,
-  MatSnackBarModule,
-  MatSidenavModule,
-  MatListModule,
-  MatSlideToggleModule,
-  MatProgressSpinnerModule,
-  MatCheckboxModule
-} from "@angular/material";
+import { MatButtonModule } from "@angular/material/button";
+import { MatCardModule } from "@angular/material/card";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatNativeDateModule } from "@angular/material/core";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatIconModule } from "@angular/material/icon";
+import { MatInputModule } from "@angular/material/input";
+import { MatListModule } from "@angular/material/list";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+import { MatSelectModule } from "@angular/material/select";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 import { OverlayModule } from '@angular/cdk/overlay';
 
@@ -40,7 +38,8 @@ import { CustomerEditComponent } from "./customers/customer-edit/customer-edit.c
 import { CustomersListComponent } from "./customers/customers-list/customers-list.component";
 import { AppTabelComponent } from "./reports/app-tabel/app-tabel.component";
 import { AppHeaderComponent } from "./reports/app-header/app-header.component";
-import { MatPaginatorModule, MatSortModule } from "@angular/material";
+import { MatPaginatorModule } from "@angular/material/paginator";
+import { MatSortModule } from "@angular/material/sort";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { ReportDetailsComponent } from "./reports/report-details/report-details.component";
 import { CustomersHeaderComponent } from "./customers/customers-header/customers-header.component";

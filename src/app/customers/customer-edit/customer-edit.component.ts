@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, ViewChild } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef, MatSnackBar } from '@angular/material';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { NgForm } from '@angular/forms';
 import { FullCustomerModel } from 'src/app/models/fullCustomerModel';
 import { CustomersService } from 'src/app/services/customers.service';
