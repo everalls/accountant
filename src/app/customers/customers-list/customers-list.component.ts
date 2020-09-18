@@ -49,8 +49,8 @@ export class CustomersListComponent implements OnInit , OnDestroy {
   statusId = null;
   allCustomersSubscription: Subscription;
 
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   constructor(
     private reportsService: ReportsService,
     private customerService: CustomersService,

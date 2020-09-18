@@ -15,7 +15,7 @@ import { CustomersListComponent } from '../customers-list/customers-list.compone
   styleUrls: ['./customer-edit.component.css']
 })
 export class CustomerEditComponent implements OnInit {
-  @ViewChild('cf') customerForm: NgForm;
+  @ViewChild('cf', { static: true }) customerForm: NgForm;
   editFlag = false;
   deleteFlag = false;
   color = 'primary';

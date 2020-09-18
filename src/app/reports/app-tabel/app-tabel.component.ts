@@ -39,8 +39,8 @@ export class AppTabelComponent implements OnInit, OnDestroy {
   statusId = null;
   dataSource = new MatTableDataSource<CustomerReportModel>();
   reportsFilter;
-  @ViewChild(MatSort) sort: MatSort;
-  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   private dialogRef: MatDialogRef<ToggleDialogComponent>;
 
   constructor(

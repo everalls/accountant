@@ -19,7 +19,7 @@ export class ProgressSpinnerComponent implements OnInit {
   @Input() positionGloballyCenter = true;
   @Input() displayProgressSpinner: boolean;
 
-  @ViewChild('progressSpinnerRef')
+  @ViewChild('progressSpinnerRef', { static: true })
   private progressSpinnerRef: TemplateRef<any>;
   private progressSpinnerOverlayConfig: OverlayConfig;
   private overlayRef: OverlayRef;
