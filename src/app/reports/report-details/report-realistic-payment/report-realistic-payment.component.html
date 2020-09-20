@@ -1,261 +1,264 @@
 <div class="card primaryInstitutionsCard">
-  <div class="card-title">
-    <div class="title primaryTitle3">
-      תשלומים בפועל
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="title card-title">
-                ערך
-              </div>
-              <div class="row-flex">
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ערך מע"מ</mat-label>
-                  <input matInput type="number" [(ngModel)]="vatValue" readonly>
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ערך מקדמות מ"ה</mat-label>
-                  <input matInput type="number" [(ngModel)]="incomeTaxDownPaymentsVal" readonly>
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ערך ניכויים מ"ה</mat-label>
-                  <input matInput type="number" [(ngModel)]="incomeTaxDeductionsVal" readonly>
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ערך מקדמות בט"ל</mat-label>
-                  <input matInput type="number" [(ngModel)]="nationalInsuranceDownPaymentsVal">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ערך ניכויים בט"ל</mat-label>
-                  <input matInput type="number" [(ngModel)]="nationalInsuranceDeductionsVal">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ערך קבלנים</mat-label>
-                  <input matInput type="number" [(ngModel)]="contractorsVal">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ערך שכירות</mat-label>
-                  <input matInput type="number" [(ngModel)]="leaseVal">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="title card-title">
-                סוג דיווח
-              </div>
-              <div class="row-flex">
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">סוג דיווח מע"מ</mat-label>
-                  <input matInput type="number" [(ngModel)]="vatReportPeriodType" readonly>
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מקדמות מ"ה</mat-label>
-                  <input matInput type="number" [(ngModel)]="incomeTaxDownPaymentsPeriodType" readonly>
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ניכויים מ"ה</mat-label>
-                  <input matInput type="number" [(ngModel)]="incomeTaxDeductionsPeriodType" readonly>
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מקדמות בט"ל</mat-label>
-                  <input matInput type="number" [(ngModel)]="nationalInsuranceDownPaymentsPeriodType">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ניכויים בט"ל</mat-label>
-                  <input matInput type="number" [(ngModel)]="nationalInsuranceDeductionsPeriodType">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מעסיק קבלנים</mat-label>
-                  <input matInput type="number" [(ngModel)]="contractorsEmployerPeriodType">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">משלם שכירות</mat-label>
-                  <input matInput type="number" [(ngModel)]="leasePaymentPeriodType">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="title card-title">
-                מועד תשלום
-              </div>
-              <div class="row-flex">
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מועד מע"מ</mat-label>
-                  <input matInput [matDatepicker]="picker6" [formControl]="vatAppointedDate">
-                  <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
-                  <mat-datepicker #picker6></mat-datepicker>
-                </mat-form-field>
-                <mat-form-field [fxHide]="mobileQuery.matches ? 'true' : 'false'" appearance="outline"
-                  class="whiteSpace">
-                  <mat-label></mat-label>
-                  <input matInput readonly>
-                  <mat-icon matPrefix></mat-icon>
-                </mat-form-field>
+	<div class="card-title">
+		<div class="title primaryTitle3">
+			תשלומים בפועל
+		</div>
+		<div class="card">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="title card-title">
+								ערך
+							</div>
+							<div class="row-flex">
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ערך מע"מ</mat-label>
+									<input matInput type="number" [(ngModel)]="vatValue" readonly>
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ערך מקדמות מ"ה</mat-label>
+									<input matInput type="number" [(ngModel)]="incomeTaxDownPaymentsVal" readonly>
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ערך ניכויים מ"ה</mat-label>
+									<input matInput type="number" [(ngModel)]="incomeTaxDeductionsVal" readonly>
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ערך מקדמות בט"ל</mat-label>
+									<input matInput type="number" [(ngModel)]="nationalInsuranceDownPaymentsVal">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ערך ניכויים בט"ל</mat-label>
+									<input matInput type="number" [(ngModel)]="nationalInsuranceDeductionsVal">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ערך קבלנים</mat-label>
+									<input matInput type="number" [(ngModel)]="contractorsVal">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ערך שכירות</mat-label>
+									<input matInput type="number" [(ngModel)]="leaseVal">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="title card-title">
+								סוג דיווח
+							</div>
+							<div class="row-flex">
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">סוג דיווח מע"מ</mat-label>
+									<input matInput type="number" [(ngModel)]="vatReportPeriodType" readonly>
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מקדמות מ"ה</mat-label>
+									<input matInput type="number" [(ngModel)]="incomeTaxDownPaymentsPeriodType"
+										readonly>
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ניכויים מ"ה</mat-label>
+									<input matInput type="number" [(ngModel)]="incomeTaxDeductionsPeriodType" readonly>
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מקדמות בט"ל</mat-label>
+									<input matInput type="number" [(ngModel)]="nationalInsuranceDownPaymentsPeriodType">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ניכויים בט"ל</mat-label>
+									<input matInput type="number" [(ngModel)]="nationalInsuranceDeductionsPeriodType">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מעסיק קבלנים</mat-label>
+									<input matInput type="number" [(ngModel)]="contractorsEmployerPeriodType">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">משלם שכירות</mat-label>
+									<input matInput type="number" [(ngModel)]="leasePaymentPeriodType">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="title card-title">
+								מועד תשלום
+							</div>
+							<div class="row-flex">
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מועד מע"מ</mat-label>
+									<input matInput [matDatepicker]="picker6" [formControl]="vatAppointedDate">
+									<mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
+									<mat-datepicker #picker6></mat-datepicker>
+								</mat-form-field>
+								<mat-form-field [fxHide]="mobileQuery.matches ? 'true' : 'false'" appearance="outline"
+									class="whiteSpace">
+									<mat-label></mat-label>
+									<input matInput readonly>
+									<mat-icon matPrefix></mat-icon>
+								</mat-form-field>
 
-                <mat-form-field appearance="outline" class="unedited">
-                  <mat-label class="sub-title">מועד ניכויים מ"ה</mat-label>
-                  <input matInput [matDatepicker]="picker7" [formControl]="incomeTaxDeductionsDate" disabled readonly>
-                  <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
-                  <mat-datepicker #picker7></mat-datepicker>
-                </mat-form-field>
+								<mat-form-field appearance="outline" class="unedited">
+									<mat-label class="sub-title">מועד ניכויים מ"ה</mat-label>
+									<input matInput [matDatepicker]="picker7" [formControl]="incomeTaxDeductionsDate"
+										disabled readonly>
+									<mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
+									<mat-datepicker #picker7></mat-datepicker>
+								</mat-form-field>
 
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מועד מקדמות מ"ה</mat-label>
-                  <input matInput [matDatepicker]="picker8" [formControl]="incomeTaxDownPaymentAppointedDate">
-                  <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
-                  <mat-datepicker #picker8></mat-datepicker>
-                </mat-form-field>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title card-title">
-            ניכויים
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="row-flex">
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">משכורות מ"ה</mat-label>
-                  <input matInput type="number" [(ngModel)]="incomeTaxSalaries">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">עובדים מ"ה</mat-label>
-                  <input matInput type="number" [(ngModel)]="incomeTaxWorkers">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">שכירות</mat-label>
-                  <input matInput type="number" [(ngModel)]="lease">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">קבלנים</mat-label>
-                  <input matInput type="number" [(ngModel)]="contractors">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="row-flex">
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">הוצאת משכורות</mat-label>
-                  <input matInput type="number" [(ngModel)]="payrollExpenses">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">עובדים</mat-label>
-                  <input matInput type="number" [(ngModel)]="workers">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field [fxHide]="mobileQuery.matches ? 'true' : 'false'" appearance="outline"
-                  class="whiteSpace">
-                  <mat-label></mat-label>
-                  <input matInput readonly>
-                  <mat-icon matPrefix></mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">סה"כ קבלנים</mat-label>
-                  <input matInput type="number" [(ngModel)]="totalContractors">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="row-flex">
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מס משכורות</mat-label>
-                  <input matInput type="number" [(ngModel)]="salariesVat">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field [fxHide]="mobileQuery.matches ? 'true' : 'false'" appearance="outline"
-                  class="whiteSpace">
-                  <mat-label></mat-label>
-                  <input matInput readonly>
-                  <mat-icon matPrefix></mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מס שכירות</mat-label>
-                  <input matInput type="number" [(ngModel)]="leaseVat">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מס קבלנים</mat-label>
-                  <input matInput type="number" [(ngModel)]="contractorsVat">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <button mat-button class="saveButton" (click)="saveReportData()">שמור</button> -->
-    </div>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מועד מקדמות מ"ה</mat-label>
+									<input matInput [matDatepicker]="picker8"
+										[formControl]="incomeTaxDownPaymentAppointedDate">
+									<mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
+									<mat-datepicker #picker8></mat-datepicker>
+								</mat-form-field>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title card-title">
+						ניכויים
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="row-flex">
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">משכורות מ"ה</mat-label>
+									<input matInput type="number" [(ngModel)]="incomeTaxSalaries">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">עובדים מ"ה</mat-label>
+									<input matInput type="number" [(ngModel)]="incomeTaxWorkers">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">שכירות</mat-label>
+									<input matInput type="number" [(ngModel)]="lease">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">קבלנים</mat-label>
+									<input matInput type="number" [(ngModel)]="contractors">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="row-flex">
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">הוצאת משכורות</mat-label>
+									<input matInput type="number" [(ngModel)]="payrollExpenses">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">עובדים</mat-label>
+									<input matInput type="number" [(ngModel)]="workers">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field [fxHide]="mobileQuery.matches ? 'true' : 'false'" appearance="outline"
+									class="whiteSpace">
+									<mat-label></mat-label>
+									<input matInput readonly>
+									<mat-icon matPrefix></mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">סה"כ קבלנים</mat-label>
+									<input matInput type="number" [(ngModel)]="totalContractors">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="row-flex">
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מס משכורות</mat-label>
+									<input matInput type="number" [(ngModel)]="salariesVat">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field [fxHide]="mobileQuery.matches ? 'true' : 'false'" appearance="outline"
+									class="whiteSpace">
+									<mat-label></mat-label>
+									<input matInput readonly>
+									<mat-icon matPrefix></mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מס שכירות</mat-label>
+									<input matInput type="number" [(ngModel)]="leaseVat">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מס קבלנים</mat-label>
+									<input matInput type="number" [(ngModel)]="contractorsVat">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <button mat-button class="saveButton" (click)="saveReportData()">שמור</button> -->
+		</div>
 
-    <div class="card">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title card-title">
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="row-flex">
-                <mat-form-field appearance="outline" class="unedited">
-                  <mat-label class="sub-title">סה"כ ניכויים</mat-label>
-                  <input matInput type="number" [(ngModel)]="totalDeductions" readonly>
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">ניכויים למ"ה</mat-label>
-                  <input matInput type="number" [(ngModel)]="incomeTaxDeductions">
-                  <mat-icon matPrefix>₪</mat-icon>
-                </mat-form-field>
-              </div>
-            </div>
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-              <div class="row-flex">
-                <mat-form-field appearance="outline">
-                  <mat-label class="sub-title">מועד ניכויים מ"ה</mat-label>
-                  <input matInput [matDatepicker]="picker9" [formControl]="incomeTaxDeductionsDate">
-                  <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
-                  <mat-datepicker #picker9></mat-datepicker>
-                </mat-form-field>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="button-row">
-        <div class="col-md-12">
-          <button mat-button class="saveButton" (click)="saveReportData()">שמור</button>
-        </div>
-      </div>
+		<div class="card">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="title card-title">
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="row-flex">
+								<mat-form-field appearance="outline" class="unedited">
+									<mat-label class="sub-title">סה"כ ניכויים</mat-label>
+									<input matInput type="number" [(ngModel)]="totalDeductions" readonly>
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">ניכויים למ"ה</mat-label>
+									<input matInput type="number" [(ngModel)]="incomeTaxDeductions">
+									<mat-icon matPrefix>₪</mat-icon>
+								</mat-form-field>
+							</div>
+						</div>
+						<div class="col-md-4">
+						</div>
+						<div class="col-md-4">
+							<div class="row-flex">
+								<mat-form-field appearance="outline">
+									<mat-label class="sub-title">מועד ניכויים מ"ה</mat-label>
+									<input matInput [matDatepicker]="picker9" [formControl]="incomeTaxDeductionsDate">
+									<mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
+									<mat-datepicker #picker9></mat-datepicker>
+								</mat-form-field>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="button-row">
+				<div class="col-md-12">
+					<button mat-button class="saveButton">שמור</button>
+				</div>
+			</div>
 
-    </div>
-  </div>
+		</div>
+	</div>
 </div>
