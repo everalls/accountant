@@ -1,4 +1,4 @@
-import { Component, OnInit , Renderer } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ReportsService } from './services/reports.service';
 import { DateFilterModel } from './models/dateFilterModel';
 import { ActivatedRoute } from '@angular/router';
@@ -9,12 +9,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private render: Renderer){
+  constructor(private render: Renderer2){
   }
 
   routeSidebar(event:any){    
     // event.preventDefault();
-    this.render.setElementClass(event.target, "active", true);
+    // event.preventDefault();
+this.render.addClass(event.target, "active");
 
   }
 }
