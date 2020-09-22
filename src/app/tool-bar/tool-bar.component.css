@@ -1,25 +1,18 @@
-  .navbar {
-    padding: 0;
-  }
+/* "nav-toolbar uses display: flex, so thid will fill remained soace */
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
 
-  .fill-remaining-space {
-    /* This fills the remaining space, by using flexbox. 
-       Every toolbar row uses a flexbox row layout. */
-    /* flex: 1 1 auto;  */
-    top:0;
-    padding: 0;
-  }
+.mat-menu-item {
+  text-align: right;
+}
 
-  .mat-menu-item {
-    text-align: right;
-  }
+.close-button {
+  text-align: left;
+  outline: none;
+}
 
-  .close-button {
-    text-align: left;
-    outline: none;
-  } 
-
-  .app-side-nav  {
-    height: 100%;
-    overflow: hidden;
-  }
+.app-side-nav {
+  height: 100%;
+  overflow: hidden;
+}

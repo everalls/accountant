@@ -1,4 +1,3 @@
-
 @import "~bootstrap/dist/css/bootstrap.css";
 
 @font-face {
@@ -101,6 +100,7 @@ th {
 
 html,
 body {
+  direction: rtl !important;
   height: 100%;
   margin: 0;
   /* font-family: Roboto, "Helvetica Neue", sans-serif; */
