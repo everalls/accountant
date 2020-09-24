@@ -11,22 +11,22 @@
 	<mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" position="end"
 		[opened]="mobileQuery.matches ? false : true">
 		<mat-nav-list>
-			<button class="close-button" mat-menu-item (click)="sidenav.toggle()" routerLinkActive="active">
+			<button class="close-button" (click)="sidenav.toggle()" routerLinkActive="active">
 				<mat-icon>arrow_forward</mat-icon>
 			</button>
-			<button mat-menu-item routerLinkActive="active" routerLink="/reports">
+			<button class="navItem" mat-menu-item routerLinkActive="active" routerLink="/reports">
 				<mat-icon>assignment</mat-icon>
 				<span>דוחות</span>
 			</button>
-			<button mat-menu-item routerLinkActive="active" routerLink="/customers">
+			<button class="navItem" routerLinkActive="active" routerLink="/customers">
 				<mat-icon>people</mat-icon>
 				<span>לקוחות שלי</span>
 			</button>
-			<button mat-menu-item routerLinkActive="active" routerLink="/monthlyreport">
+			<button class="navItem" routerLinkActive="active" routerLink="/monthlyreport">
 				<mat-icon>note_add</mat-icon>
 				<span>הזנת דיווח חודשי ללקוח</span>
 			</button>
-			<button mat-menu-item routerLinkActive="active" routerLink="/customerdetails">
+			<button class="navItem" routerLinkActive="active" routerLink="/customerdetails">
 				<mat-icon>account_box</mat-icon>
 				<span>תחזוקת נתוני הלקוח</span>
 			</button>
